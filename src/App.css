@@ -1,38 +1,158 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+  background: #fff;
+}
+.Navbar{
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  background: linear-gradient(to right,rgb(64, 126, 64),rgb(21, 136, 11));
+}
+.Navbar__container{
+  width: 1200px;
+  max-width: 1200px;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  color:#fff;
+  align-items: center;
+}
+.Navbar__logo{
+  flex: 1;
+}
+.Navbar__links{
+  flex: 1;
+  text-align: right;
+  display:flex;
+  justify-content: flex-end;
+}
+.Navbar__links li{
+  list-style-type: none;
+}
+.Navbar__btn{
+  text-decoration: none;
+  border: none;
+  height: 35px;
+  background: rgb(0, 140, 255);
+  color: #fff;
+  padding: 0 10px;
+  outline: none;
+  cursor: pointer;
+
+}
+.Navbar__img{
+  width: 30px;
+  height: 30px;
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 10px;
+
+}
+.Navbar__img img{
+  width: 100%;
+  height: 100;
+}
+.Messages{
+  width:1200px;
+  max-width: 1200px;
+  position: fixed;
+  left: 0;
+  right:0;
+  background:antiquewhite;
+  height: calc(100vh-120px);
+  margin: 60px auto;
+  padding: 20px;
+}
+.Messages__other{
+  display: flex;
+}
+.Messages__other_img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden; 
+}
+.Messages__other_img img{
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Messages__other_mgs{
+  width: 400px;
+  padding-left: 10px;
+}
+.Messages__other_mgs span{
+  display: block;
+  text-transform: capitalize;
+}
+.Messages__other_mgs p{
+  display: inline-block;
+  background: #fff;
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 7px;
+  border-radius: 15px;
+}
+.Messages__my{
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+.Messages__my_mgs p{
+  width: 400px;
   text-align: center;
 }
+.Messages__my_mgs p{
+  display: inline-block;
+  padding: 10px;
+  font-size: 14px;
+  background:linear-gradient(to right,rgb(64, 126, 64),rgb(21, 136, 11));
+  color: #fff;
+  border-radius: 15px;
+}
+.Input__form{
+  position: fixed;
+  bottom: 0;
+  left:0;
+  right:0;
+  width: 1200px;
+  margin: 0 auto;
+}
+.Input__control{
+  background: #fff;
+  width: 100%;
+  height: 60px;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+}
+.Welcome{
+  background: #fff;
+  width: 1200px;
+  margin: 90px auto;
+  padding: 20px;
+
+}
+.Welcome h1{
+  margin-bottom: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width:765px){
+  .Navbar__container{
+    width: 500px;
+    max-width: 500px;
+
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  .Messages{
+    width: 90%;
   }
 }
